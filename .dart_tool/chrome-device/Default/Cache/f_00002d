@@ -1,0 +1,901 @@
+define(['dart_sdk', 'packages/flutter/src/widgets/widget_span.dart', 'packages/the_palm_project/pages/payment_pages/widgets/globals.dart', 'packages/flutter/src/painting/edge_insets.dart', 'packages/flutter/src/painting/box_decoration.dart', 'packages/flutter/src/material/colors.dart', 'packages/flutter/src/painting/box_border.dart', 'packages/flutter/src/painting/border_radius.dart', 'packages/flutter/src/material/icon_button.dart', 'packages/google_fonts/src/google_fonts_base.dart', 'packages/flutter/src/material/dropdown.dart', 'packages/flutter/src/widgets/icon.dart', 'packages/flutter/src/material/icons.dart', 'packages/flutter/src/painting/strut_style.dart', 'packages/flutter/src/material/checkbox.dart'], (function load__packages__the_palm_project__pages__payment_pages__widgets__room_card_dart(dart_sdk, packages__flutter__src__widgets__widget_span$46dart, packages__the_palm_project__pages__payment_pages__widgets__globals$46dart, packages__flutter__src__painting__edge_insets$46dart, packages__flutter__src__painting__box_decoration$46dart, packages__flutter__src__material__colors$46dart, packages__flutter__src__painting__box_border$46dart, packages__flutter__src__painting__border_radius$46dart, packages__flutter__src__material__icon_button$46dart, packages__google_fonts__src__google_fonts_base$46dart, packages__flutter__src__material__dropdown$46dart, packages__flutter__src__widgets__icon$46dart, packages__flutter__src__material__icons$46dart, packages__flutter__src__painting__strut_style$46dart, packages__flutter__src__material__checkbox$46dart) {
+  'use strict';
+  const core = dart_sdk.core;
+  const _interceptors = dart_sdk._interceptors;
+  const _js_helper = dart_sdk._js_helper;
+  const ui = dart_sdk.ui;
+  const dart = dart_sdk.dart;
+  const dartx = dart_sdk.dartx;
+  const framework = packages__flutter__src__widgets__widget_span$46dart.src__widgets__framework;
+  const container = packages__flutter__src__widgets__widget_span$46dart.src__widgets__container;
+  const basic = packages__flutter__src__widgets__widget_span$46dart.src__widgets__basic;
+  const text = packages__flutter__src__widgets__widget_span$46dart.src__widgets__text;
+  const widget_inspector = packages__flutter__src__widgets__widget_span$46dart.src__widgets__widget_inspector;
+  const globals = packages__the_palm_project__pages__payment_pages__widgets__globals$46dart.pages__payment_pages__widgets__globals;
+  const edge_insets = packages__flutter__src__painting__edge_insets$46dart.src__painting__edge_insets;
+  const box_decoration = packages__flutter__src__painting__box_decoration$46dart.src__painting__box_decoration;
+  const colors = packages__flutter__src__material__colors$46dart.src__material__colors;
+  const box_border = packages__flutter__src__painting__box_border$46dart.src__painting__box_border;
+  const border_radius = packages__flutter__src__painting__border_radius$46dart.src__painting__border_radius;
+  const app_bar = packages__flutter__src__material__icon_button$46dart.src__material__app_bar;
+  const icon_button = packages__flutter__src__material__icon_button$46dart.src__material__icon_button;
+  const google_fonts = packages__google_fonts__src__google_fonts_base$46dart.google_fonts;
+  const dropdown = packages__flutter__src__material__dropdown$46dart.src__material__dropdown;
+  const icon = packages__flutter__src__widgets__icon$46dart.src__widgets__icon;
+  const icons = packages__flutter__src__material__icons$46dart.src__material__icons;
+  const text_style = packages__flutter__src__painting__strut_style$46dart.src__painting__text_style;
+  const checkbox = packages__flutter__src__material__checkbox$46dart.src__material__checkbox;
+  var room_card = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $_set = dartx._set;
+  var $map = dartx.map;
+  var $toList = dartx.toList;
+  dart._checkModuleNullSafetyMode(false);
+  var T = {
+    StringL: () => (T.StringL = dart.constFn(dart.legacy(core.String)))(),
+    JSArrayOfStringL: () => (T.JSArrayOfStringL = dart.constFn(_interceptors.JSArray$(T.StringL())))(),
+    intL: () => (T.intL = dart.constFn(dart.legacy(core.int)))(),
+    IdentityMapOfStringL$intL: () => (T.IdentityMapOfStringL$intL = dart.constFn(_js_helper.IdentityMap$(T.StringL(), T.intL())))(),
+    VoidToNull: () => (T.VoidToNull = dart.constFn(dart.fnType(core.Null, [])))(),
+    _LocationL: () => (T._LocationL = dart.constFn(dart.legacy(widget_inspector._Location)))(),
+    DropdownButtonOfStringL: () => (T.DropdownButtonOfStringL = dart.constFn(dropdown.DropdownButton$(T.StringL())))(),
+    DropdownMenuItemOfStringL: () => (T.DropdownMenuItemOfStringL = dart.constFn(dropdown.DropdownMenuItem$(T.StringL())))(),
+    DropdownMenuItemLOfStringL: () => (T.DropdownMenuItemLOfStringL = dart.constFn(dart.legacy(T.DropdownMenuItemOfStringL())))(),
+    StringLToDropdownMenuItemLOfStringL: () => (T.StringLToDropdownMenuItemLOfStringL = dart.constFn(dart.fnType(T.DropdownMenuItemLOfStringL(), [T.StringL()])))(),
+    StringLToNull: () => (T.StringLToNull = dart.constFn(dart.fnType(core.Null, [T.StringL()])))(),
+    WidgetL: () => (T.WidgetL = dart.constFn(dart.legacy(framework.Widget)))(),
+    JSArrayOfWidgetL: () => (T.JSArrayOfWidgetL = dart.constFn(_interceptors.JSArray$(T.WidgetL())))(),
+    boolL: () => (T.boolL = dart.constFn(dart.legacy(core.bool)))(),
+    boolLToNull: () => (T.boolLToNull = dart.constFn(dart.fnType(core.Null, [T.boolL()])))()
+  };
+  var T$Eval = Object.assign({
+    _: () => T$Eval
+  }, T);
+  var S = {
+    _: () => S
+  };
+  var S$Eval = Object.assign({
+    _: () => S$Eval
+  }, S);
+  const CT = Object.create({
+    _: () => (C, CT)
+  });
+  dart.defineLazy(CT, {
+    get C2() {
+      return C[2] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 52,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C1() {
+      return C[1] = dart.constList([C[2] || CT.C2], T._LocationL());
+    },
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[1] || CT.C1,
+        [_Location_name]: null,
+        [_Location_column]: 22,
+        [_Location_line]: 71,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C5() {
+      return C[5] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "title",
+        [_Location_column]: 15,
+        [_Location_line]: 71,
+        [_Location_file]: null
+      });
+    },
+    get C4() {
+      return C[4] = dart.constList([C[5] || CT.C5], T._LocationL());
+    },
+    get C3() {
+      return C[3] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[4] || CT.C4,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 70,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C8() {
+      return C[8] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 23,
+        [_Location_line]: 78,
+        [_Location_file]: null
+      });
+    },
+    get C9() {
+      return C[9] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 79,
+        [_Location_file]: null
+      });
+    },
+    get C7() {
+      return C[7] = dart.constList([C[8] || CT.C8, C[9] || CT.C9], T._LocationL());
+    },
+    get C6() {
+      return C[6] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[7] || CT.C7,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 77,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C12() {
+      return C[12] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 23,
+        [_Location_line]: 87,
+        [_Location_file]: null
+      });
+    },
+    get C11() {
+      return C[11] = dart.constList([C[12] || CT.C12], T._LocationL());
+    },
+    get C10() {
+      return C[10] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[11] || CT.C11,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 86,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C15() {
+      return C[15] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 43,
+        [_Location_line]: 93,
+        [_Location_file]: null
+      });
+    },
+    get C14() {
+      return C[14] = dart.constList([C[15] || CT.C15], T._LocationL());
+    },
+    get C13() {
+      return C[13] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[14] || CT.C14,
+        [_Location_name]: null,
+        [_Location_column]: 38,
+        [_Location_line]: 93,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C18() {
+      return C[18] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 27,
+        [_Location_line]: 92,
+        [_Location_file]: null
+      });
+    },
+    get C19() {
+      return C[19] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 27,
+        [_Location_line]: 93,
+        [_Location_file]: null
+      });
+    },
+    get C17() {
+      return C[17] = dart.constList([C[18] || CT.C18, C[19] || CT.C19], T._LocationL());
+    },
+    get C16() {
+      return C[16] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[17] || CT.C17,
+        [_Location_name]: null,
+        [_Location_column]: 36,
+        [_Location_line]: 91,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C22() {
+      return C[22] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "items",
+        [_Location_column]: 23,
+        [_Location_line]: 90,
+        [_Location_file]: null
+      });
+    },
+    get C23() {
+      return C[23] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChanged",
+        [_Location_column]: 23,
+        [_Location_line]: 96,
+        [_Location_file]: null
+      });
+    },
+    get C24() {
+      return C[24] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 23,
+        [_Location_line]: 105,
+        [_Location_file]: null
+      });
+    },
+    get C21() {
+      return C[21] = dart.constList([C[22] || CT.C22, C[23] || CT.C23, C[24] || CT.C24], T._LocationL());
+    },
+    get C20() {
+      return C[20] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[21] || CT.C21,
+        [_Location_name]: null,
+        [_Location_column]: 25,
+        [_Location_line]: 89,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C27() {
+      return C[27] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 76,
+        [_Location_file]: null
+      });
+    },
+    get C26() {
+      return C[26] = dart.constList([C[27] || CT.C27], T._LocationL());
+    },
+    get C25() {
+      return C[25] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[26] || CT.C26,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 75,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C30() {
+      return C[30] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 23,
+        [_Location_line]: 112,
+        [_Location_file]: null
+      });
+    },
+    get C31() {
+      return C[31] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 113,
+        [_Location_file]: null
+      });
+    },
+    get C29() {
+      return C[29] = dart.constList([C[30] || CT.C30, C[31] || CT.C31], T._LocationL());
+    },
+    get C28() {
+      return C[28] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[29] || CT.C29,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 111,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C34() {
+      return C[34] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 23,
+        [_Location_line]: 121,
+        [_Location_file]: null
+      });
+    },
+    get C33() {
+      return C[33] = dart.constList([C[34] || CT.C34], T._LocationL());
+    },
+    get C32() {
+      return C[32] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[33] || CT.C33,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 120,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C37() {
+      return C[37] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 40,
+        [_Location_line]: 124,
+        [_Location_file]: null
+      });
+    },
+    get C36() {
+      return C[36] = dart.constList([C[37] || CT.C37], T._LocationL());
+    },
+    get C35() {
+      return C[35] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[36] || CT.C36,
+        [_Location_name]: null,
+        [_Location_column]: 29,
+        [_Location_line]: 124,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C40() {
+      return C[40] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 23,
+        [_Location_line]: 124,
+        [_Location_file]: null
+      });
+    },
+    get C41() {
+      return C[41] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 23,
+        [_Location_line]: 125,
+        [_Location_file]: null
+      });
+    },
+    get C42() {
+      return C[42] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 23,
+        [_Location_line]: 126,
+        [_Location_file]: null
+      });
+    },
+    get C39() {
+      return C[39] = dart.constList([C[40] || CT.C40, C[41] || CT.C41, C[42] || CT.C42], T._LocationL());
+    },
+    get C38() {
+      return C[38] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[39] || CT.C39,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 123,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C45() {
+      return C[45] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 31,
+        [_Location_line]: 129,
+        [_Location_file]: null
+      });
+    },
+    get C46() {
+      return C[46] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 130,
+        [_Location_file]: null
+      });
+    },
+    get C44() {
+      return C[44] = dart.constList([C[45] || CT.C45, C[46] || CT.C46], T._LocationL());
+    },
+    get C43() {
+      return C[43] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[44] || CT.C44,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 128,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C49() {
+      return C[49] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 40,
+        [_Location_line]: 133,
+        [_Location_file]: null
+      });
+    },
+    get C48() {
+      return C[48] = dart.constList([C[49] || CT.C49], T._LocationL());
+    },
+    get C47() {
+      return C[47] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[48] || CT.C48,
+        [_Location_name]: null,
+        [_Location_column]: 29,
+        [_Location_line]: 133,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C52() {
+      return C[52] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "icon",
+        [_Location_column]: 23,
+        [_Location_line]: 133,
+        [_Location_file]: null
+      });
+    },
+    get C53() {
+      return C[53] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onPressed",
+        [_Location_column]: 23,
+        [_Location_line]: 134,
+        [_Location_file]: null
+      });
+    },
+    get C54() {
+      return C[54] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "color",
+        [_Location_column]: 23,
+        [_Location_line]: 135,
+        [_Location_file]: null
+      });
+    },
+    get C51() {
+      return C[51] = dart.constList([C[52] || CT.C52, C[53] || CT.C53, C[54] || CT.C54], T._LocationL());
+    },
+    get C50() {
+      return C[50] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[51] || CT.C51,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 132,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C57() {
+      return C[57] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 110,
+        [_Location_file]: null
+      });
+    },
+    get C56() {
+      return C[56] = dart.constList([C[57] || CT.C57], T._LocationL());
+    },
+    get C55() {
+      return C[55] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[56] || CT.C56,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 109,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C60() {
+      return C[60] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "data",
+        [_Location_column]: 23,
+        [_Location_line]: 142,
+        [_Location_file]: null
+      });
+    },
+    get C61() {
+      return C[61] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "style",
+        [_Location_column]: 23,
+        [_Location_line]: 143,
+        [_Location_file]: null
+      });
+    },
+    get C59() {
+      return C[59] = dart.constList([C[60] || CT.C60, C[61] || CT.C61], T._LocationL());
+    },
+    get C58() {
+      return C[58] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[59] || CT.C59,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 141,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C64() {
+      return C[64] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 23,
+        [_Location_line]: 151,
+        [_Location_file]: null
+      });
+    },
+    get C63() {
+      return C[63] = dart.constList([C[64] || CT.C64], T._LocationL());
+    },
+    get C62() {
+      return C[62] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[63] || CT.C63,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 150,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C67() {
+      return C[67] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "checkColor",
+        [_Location_column]: 23,
+        [_Location_line]: 154,
+        [_Location_file]: null
+      });
+    },
+    get C68() {
+      return C[68] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "value",
+        [_Location_column]: 23,
+        [_Location_line]: 155,
+        [_Location_file]: null
+      });
+    },
+    get C69() {
+      return C[69] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "onChanged",
+        [_Location_column]: 23,
+        [_Location_line]: 156,
+        [_Location_file]: null
+      });
+    },
+    get C66() {
+      return C[66] = dart.constList([C[67] || CT.C67, C[68] || CT.C68, C[69] || CT.C69], T._LocationL());
+    },
+    get C65() {
+      return C[65] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[66] || CT.C66,
+        [_Location_name]: null,
+        [_Location_column]: 21,
+        [_Location_line]: 153,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C72() {
+      return C[72] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 19,
+        [_Location_line]: 140,
+        [_Location_file]: null
+      });
+    },
+    get C71() {
+      return C[71] = dart.constList([C[72] || CT.C72], T._LocationL());
+    },
+    get C70() {
+      return C[70] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[71] || CT.C71,
+        [_Location_name]: null,
+        [_Location_column]: 17,
+        [_Location_line]: 139,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C75() {
+      return C[75] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 15,
+        [_Location_line]: 74,
+        [_Location_file]: null
+      });
+    },
+    get C74() {
+      return C[74] = dart.constList([C[75] || CT.C75], T._LocationL());
+    },
+    get C73() {
+      return C[73] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[74] || CT.C74,
+        [_Location_name]: null,
+        [_Location_column]: 13,
+        [_Location_line]: 73,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C78() {
+      return C[78] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "children",
+        [_Location_column]: 11,
+        [_Location_line]: 69,
+        [_Location_file]: null
+      });
+    },
+    get C77() {
+      return C[77] = dart.constList([C[78] || CT.C78], T._LocationL());
+    },
+    get C76() {
+      return C[76] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[77] || CT.C77,
+        [_Location_name]: null,
+        [_Location_column]: 16,
+        [_Location_line]: 68,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    },
+    get C81() {
+      return C[81] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "padding",
+        [_Location_column]: 9,
+        [_Location_line]: 61,
+        [_Location_file]: null
+      });
+    },
+    get C82() {
+      return C[82] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "width",
+        [_Location_column]: 9,
+        [_Location_line]: 62,
+        [_Location_file]: null
+      });
+    },
+    get C83() {
+      return C[83] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "height",
+        [_Location_column]: 9,
+        [_Location_line]: 63,
+        [_Location_file]: null
+      });
+    },
+    get C84() {
+      return C[84] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "decoration",
+        [_Location_column]: 9,
+        [_Location_line]: 64,
+        [_Location_file]: null
+      });
+    },
+    get C85() {
+      return C[85] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: null,
+        [_Location_name]: "child",
+        [_Location_column]: 9,
+        [_Location_line]: 68,
+        [_Location_file]: null
+      });
+    },
+    get C80() {
+      return C[80] = dart.constList([C[81] || CT.C81, C[82] || CT.C82, C[83] || CT.C83, C[84] || CT.C84, C[85] || CT.C85], T._LocationL());
+    },
+    get C79() {
+      return C[79] = dart.const({
+        __proto__: widget_inspector._Location.prototype,
+        [_Location_parameterLocations]: C[80] || CT.C80,
+        [_Location_name]: null,
+        [_Location_column]: 12,
+        [_Location_line]: 60,
+        [_Location_file]: "file:///E:/DSC%20Flutter/the_palm_project/lib/pages/payment_pages/widgets/room_card.dart"
+      });
+    }
+  }, false);
+  var C = Array(86).fill(void 0);
+  var I = ["package:the_palm_project/pages/payment_pages/widgets/room_card.dart"];
+  var text$ = dart.privateName(room_card, "RoomCard.text");
+  room_card.RoomCard = class RoomCard extends framework.StatefulWidget {
+    get text() {
+      return this[text$];
+    }
+    set text(value) {
+      super.text = value;
+    }
+    createState() {
+      return new room_card._RoomCardState.new();
+    }
+  };
+  (room_card.RoomCard.new = function(opts) {
+    let text = opts && 'text' in opts ? opts.text : null;
+    let $36creationLocationd_0dea112b090073317d4 = opts && '$creationLocationd_0dea112b090073317d4' in opts ? opts.$creationLocationd_0dea112b090073317d4 : null;
+    this[text$] = text;
+    room_card.RoomCard.__proto__.new.call(this, {$creationLocationd_0dea112b090073317d4: $36creationLocationd_0dea112b090073317d4});
+    ;
+  }).prototype = room_card.RoomCard.prototype;
+  dart.addTypeTests(room_card.RoomCard);
+  dart.addTypeCaches(room_card.RoomCard);
+  dart.setMethodSignature(room_card.RoomCard, () => ({
+    __proto__: dart.getMethods(room_card.RoomCard.__proto__),
+    createState: dart.fnType(dart.legacy(room_card._RoomCardState), [])
+  }));
+  dart.setLibraryUri(room_card.RoomCard, I[0]);
+  dart.setFieldSignature(room_card.RoomCard, () => ({
+    __proto__: dart.getFields(room_card.RoomCard.__proto__),
+    text: dart.finalFieldType(dart.dynamic)
+  }));
+  var _currentItemSelected = dart.privateName(room_card, "_currentItemSelected");
+  var _increment = dart.privateName(room_card, "_increment");
+  var _decrement = dart.privateName(room_card, "_decrement");
+  var _Location_parameterLocations = dart.privateName(widget_inspector, "_Location.parameterLocations");
+  var _Location_name = dart.privateName(widget_inspector, "_Location.name");
+  var _Location_column = dart.privateName(widget_inspector, "_Location.column");
+  var _Location_line = dart.privateName(widget_inspector, "_Location.line");
+  var _Location_file = dart.privateName(widget_inspector, "_Location.file");
+  room_card._RoomCardState = class _RoomCardState extends framework.State$(dart.legacy(room_card.RoomCard)) {
+    [_increment]() {
+      this.setState(dart.fn(() => {
+        core.print(this.value);
+        if (dart.notNull(this.value) >= 4) {
+          this.value = 4;
+        } else {
+          this.value = dart.notNull(this.value) + 1;
+        }
+      }, T.VoidToNull()));
+    }
+    [_decrement]() {
+      this.setState(dart.fn(() => {
+        core.print(this.value);
+        if (dart.notNull(this.value) <= 0) {
+          this.value = 0;
+        } else {
+          this.value = dart.notNull(this.value) - 1;
+        }
+      }, T.VoidToNull()));
+    }
+    roomLogic() {
+      this.setState(dart.fn(() => {
+        let t1, t0, t1$, t0$, t1$0, t0$0;
+        if (dart.equals(this.status, this.roomCount[$_get]("Regular"))) {
+          t0 = this.roomCount;
+          t1 = "Regular";
+          t0[$_set](t1, dart.notNull(t0[$_get](t1)) - 1);
+          globals.maxRoom = dart.notNull(globals.maxRoom) - 1;
+        } else if (dart.equals(this.status, this.roomCount[$_get]("Deluxe"))) {
+          t0$ = this.roomCount;
+          t1$ = "Deluxe";
+          t0$[$_set](t1$, dart.notNull(t0$[$_get](t1$)) - 1);
+          globals.maxRoom = dart.notNull(globals.maxRoom) - 1;
+        } else {
+          t0$0 = this.roomCount;
+          t1$0 = "Bamboo";
+          t0$0[$_set](t1$0, dart.notNull(t0$0[$_get](t1$0)) - 1);
+          globals.maxRoom = dart.notNull(globals.maxRoom) - 1;
+        }
+      }, T.VoidToNull()));
+    }
+    build(context) {
+      return new container.Container.new({padding: new edge_insets.EdgeInsets.all(8.0), width: 350.0, height: 250.0, decoration: new box_decoration.BoxDecoration.new({color: colors.Colors.white, border: box_border.Border.all({color: colors.Colors.black}), borderRadius: new border_radius.BorderRadius.all(new ui.Radius.circular(10.0))}), child: new basic.Column.new({children: T.JSArrayOfWidgetL().of([new app_bar.AppBar.new({title: new text.Text.new("Room " + dart.str(dart.dsend(this.widget.text, '+', [1])), {$creationLocationd_0dea112b090073317d4: C[0] || CT.C0}), $creationLocationd_0dea112b090073317d4: C[3] || CT.C3}), new basic.Column.new({children: T.JSArrayOfWidgetL().of([new basic.Row.new({children: T.JSArrayOfWidgetL().of([new text.Text.new("Types", {style: google_fonts.GoogleFonts.oswald({color: colors.Colors.black, fontSize: 24.0, fontWeight: ui.FontWeight.w400, fontStyle: ui.FontStyle.normal}), $creationLocationd_0dea112b090073317d4: C[6] || CT.C6}), new basic.SizedBox.new({width: 150.0, $creationLocationd_0dea112b090073317d4: C[10] || CT.C10}), new (T.DropdownButtonOfStringL()).new({items: this.room[$map](T.DropdownMenuItemLOfStringL(), dart.fn(dropDownStringItem => new (T.DropdownMenuItemOfStringL()).new({value: dropDownStringItem, child: new text.Text.new(dropDownStringItem, {$creationLocationd_0dea112b090073317d4: C[13] || CT.C13}), $creationLocationd_0dea112b090073317d4: C[16] || CT.C16}), T.StringLToDropdownMenuItemLOfStringL()))[$toList](), onChanged: dart.fn(newValueSelected => {
+                        this.setState(dart.fn(() => {
+                          this.status = this[_currentItemSelected];
+                          this[_currentItemSelected] = newValueSelected;
+                          core.print(this.status);
+                          this.roomLogic();
+                          core.print(this.status);
+                        }, T.VoidToNull()));
+                      }, T.StringLToNull()), value: this[_currentItemSelected], $creationLocationd_0dea112b090073317d4: C[20] || CT.C20})]), $creationLocationd_0dea112b090073317d4: C[25] || CT.C25}), new basic.Row.new({children: T.JSArrayOfWidgetL().of([new text.Text.new("Number of Guests Included", {style: google_fonts.GoogleFonts.oswald({color: colors.Colors.black, fontSize: 24.0, fontWeight: ui.FontWeight.w400, fontStyle: ui.FontStyle.normal}), $creationLocationd_0dea112b090073317d4: C[28] || CT.C28}), new basic.SizedBox.new({width: 30.0, $creationLocationd_0dea112b090073317d4: C[32] || CT.C32}), new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.add_circle_outline_rounded, {$creationLocationd_0dea112b090073317d4: C[35] || CT.C35}), onPressed: dart.bind(this, _increment), color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[38] || CT.C38}), new text.Text.new(dart.str(this.value), {style: new text_style.TextStyle.new({color: colors.Colors.black}), $creationLocationd_0dea112b090073317d4: C[43] || CT.C43}), new icon_button.IconButton.new({icon: new icon.Icon.new(icons.Icons.remove_circle_outline_rounded, {$creationLocationd_0dea112b090073317d4: C[47] || CT.C47}), onPressed: dart.bind(this, _decrement), color: colors.Colors.black, $creationLocationd_0dea112b090073317d4: C[50] || CT.C50})]), $creationLocationd_0dea112b090073317d4: C[55] || CT.C55}), new basic.Row.new({children: T.JSArrayOfWidgetL().of([new text.Text.new("Include Breakfast/Lunch", {style: google_fonts.GoogleFonts.oswald({color: colors.Colors.black, fontSize: 24.0, fontWeight: ui.FontWeight.w400, fontStyle: ui.FontStyle.normal}), $creationLocationd_0dea112b090073317d4: C[58] || CT.C58}), new basic.SizedBox.new({width: 30.0, $creationLocationd_0dea112b090073317d4: C[62] || CT.C62}), new checkbox.Checkbox.new({checkColor: colors.Colors.black, value: this.valuefirst, onChanged: dart.fn(value => {
+                        this.setState(dart.fn(() => {
+                          this.valuefirst = value;
+                        }, T.VoidToNull()));
+                      }, T.boolLToNull()), $creationLocationd_0dea112b090073317d4: C[65] || CT.C65})]), $creationLocationd_0dea112b090073317d4: C[70] || CT.C70})]), $creationLocationd_0dea112b090073317d4: C[73] || CT.C73})]), $creationLocationd_0dea112b090073317d4: C[76] || CT.C76}), $creationLocationd_0dea112b090073317d4: C[79] || CT.C79});
+    }
+  };
+  (room_card._RoomCardState.new = function() {
+    this.value = 0;
+    this.status = null;
+    this[_currentItemSelected] = "Regular";
+    this.valuefirst = false;
+    this.room = T.JSArrayOfStringL().of(["Regular", "Deluxe", "Bamboo"]);
+    this.roomCount = new (T.IdentityMapOfStringL$intL()).from(["Delux", 5, "Bamboo", 6, "Regular", 9]);
+    room_card._RoomCardState.__proto__.new.call(this);
+    ;
+  }).prototype = room_card._RoomCardState.prototype;
+  dart.addTypeTests(room_card._RoomCardState);
+  dart.addTypeCaches(room_card._RoomCardState);
+  dart.setMethodSignature(room_card._RoomCardState, () => ({
+    __proto__: dart.getMethods(room_card._RoomCardState.__proto__),
+    [_increment]: dart.fnType(dart.void, []),
+    [_decrement]: dart.fnType(dart.void, []),
+    roomLogic: dart.fnType(dart.void, []),
+    build: dart.fnType(dart.legacy(framework.Widget), [dart.legacy(framework.BuildContext)])
+  }));
+  dart.setLibraryUri(room_card._RoomCardState, I[0]);
+  dart.setFieldSignature(room_card._RoomCardState, () => ({
+    __proto__: dart.getFields(room_card._RoomCardState.__proto__),
+    value: dart.fieldType(dart.legacy(core.int)),
+    status: dart.fieldType(dart.dynamic),
+    [_currentItemSelected]: dart.fieldType(dart.legacy(core.String)),
+    valuefirst: dart.fieldType(dart.legacy(core.bool)),
+    room: dart.fieldType(dart.legacy(core.List$(dart.legacy(core.String)))),
+    roomCount: dart.fieldType(dart.legacy(core.Map$(dart.legacy(core.String), dart.legacy(core.int))))
+  }));
+  dart.trackLibraries("packages/the_palm_project/pages/payment_pages/widgets/room_card.dart", {
+    "package:the_palm_project/pages/payment_pages/widgets/room_card.dart": room_card
+  }, {
+  }, '{"version":3,"sourceRoot":"","sources":["room_card.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAMQ;;;;;;;AAI0B;IAAgB;;;QAHjC;;;AAAf;;EAAqB;;;;;;;;;;;;;;;;;;;;;;AAgBjB,MAPF,cAAS;AACK,QAAZ,WAAM;AACN,YAAU,aAAN,eAAS;AACF,UAAT,aAAQ;;AAED,UAAP,aAAK,aAAL,cAAK;;;IAGX;;AAUI,MAPF,cAAS;AACK,QAAZ,WAAM;AACN,YAAU,aAAN,eAAS;AACF,UAAT,aAAQ;;AAED,UAAP,aAAK,aAAL,cAAK;;;IAGX;;AAcI,MAXF,cAAS;;AACP,YAAW,YAAP,aAAU,AAAS,sBAAC;AACA,eAAtB;eAAU;UAAD,cAAW,aAAX,iBAAW;AACiB,UAA7B,kBAA0B,aAAR,mBAAU;cAC/B,KAAW,YAAP,aAAU,AAAS,sBAAC;AACR,gBAArB;gBAAU;UAAD,gBAAU,aAAV,mBAAU;AACkB,UAA7B,kBAA0B,aAAR,mBAAU;;AAEf,iBAArB;iBAAU;UAAD,kBAAU,aAAV,qBAAU;AACkB,UAA7B,kBAA0B,aAAR,mBAAU;;;IAG1C;UAQ0B;AACxB,YAAO,uCACiB,+BAAI,aACjB,eACC,mBACI,6CACM,6BACC,8BAAkB,qCACN,mCAAW,uBAAS,iBAC5C,gCACK,yBACR,+BACS,kBAAK,AAAyB,mBAAL,WAAZ,AAAO,wBAAO,yHAEpC,gCACY,yBACR,6BACY,yBACR,kBACE,iBACmB,wCACH,+BACJ,kBACa,+BACF,gFAGzB,+BACS,kEAEL,8CACK,AAAK,AAKT,gDALa,QAAQ,sBACX,gDACF,kBAAkB,SACd,kBAAK,kBAAkB,0LAG3B,QAAQ;AAOf,wBANF,cAAS;AACsB,0BAA7B,cAAS;AACmC,0BAAvC,6BAAuB,gBAAgB;AAC/B,0BAAb,WAAM;AACK,0BAAX;AACa,0BAAb,WAAM;;oDAGH,oJAIb,6BACY,yBACR,kBACE,qCACmB,wCACH,+BACJ,kBACa,+BACF,kFAGzB,+BACS,iEAET,sCACQ,kBAAW,yHACN,0BACG,gFAEhB,kBACU,SAAN,qBACK,qCAAwB,kFAEjC,sCACQ,kBAAW,4HACN,0BACG,6IAIpB,6BACY,yBACR,kBACE,mCACmB,wCACH,+BACJ,kBACa,+BACF,kFAGzB,+BACS,iEAET,uCACqB,4BACP,4BACD,QAAM;AAGb,wBAFF,cAAS;AACgB,0BAAlB,kBAAa,KAAK;;;IAU/C;;;IAzJI,aAAQ;IAsCR;IACA,6BAAuB;IACtB,kBAAa;IACd,YAAO,yBAAC,WAAW,UAAU;IAChB,iBAAY,0CAAC,SAAS,GAAG,UAAU,GAAG,WAAW;;;EAgHpE","file":"../../../../../../packages/the_palm_project/pages/payment_pages/widgets/room_card.dart.lib.js"}');
+  // Exports:
+  return {
+    pages__payment_pages__widgets__room_card: room_card
+  };
+}));
+
+//# sourceMappingURL=room_card.dart.lib.js.map
