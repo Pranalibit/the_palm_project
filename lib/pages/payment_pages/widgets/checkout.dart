@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:the_palm_project/utils/constant.dart';
+import 'details.dart';
 
 class CheckOut extends StatefulWidget {
   @override
@@ -256,10 +257,10 @@ class _CheckOutState extends State<CheckOut> {
                           ))),
                       onPressed: () {
                         print("Clicked on continue booking");
-                        // Navigator.push(
-                        //     context,
-                        //     MaterialPageRoute(
-                        //         builder: (context) => DeatailsPage()));
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => DetailsPage()));
                       },
                       label: Text(
                         'Continue to Booking',

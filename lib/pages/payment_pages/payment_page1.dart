@@ -1,7 +1,7 @@
 import 'dart:core';
 
 import 'package:flutter/material.dart';
-import 'package:the_palm_project/pages/payment_pages/widgets/room_card.dart';
+
 
 import 'package:the_palm_project/utils/constant.dart';
 

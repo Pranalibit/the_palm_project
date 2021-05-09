@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:video_player/video_player.dart';
-import 'package:the_palm_project/utils/constant.dart';
+
 
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

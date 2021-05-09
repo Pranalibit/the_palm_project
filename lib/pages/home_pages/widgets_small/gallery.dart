@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:the_palm_project/pages/home_pages/widgets/title_subtitle.dart';
+
 import 'package:the_palm_project/utils/constant.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

@@ -2,9 +2,8 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
-import 'dart:html' as html;
 
-import 'package:the_palm_project/utils/constant.dart';
+
 
 class Parallax extends StatefulWidget {
   const Parallax({

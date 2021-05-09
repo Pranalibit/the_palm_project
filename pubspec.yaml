@@ -22,6 +22,8 @@ dependencies:
   provider: ^5.0.0
   firebase_auth:
   firebase_core:
+  fluttertoast: ^8.0.6
+    
 
 
 dev_dependencies:

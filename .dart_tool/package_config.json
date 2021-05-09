@@ -182,6 +182,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "fluttertoast",
+      "rootUri": "file:///C:/src/flutter_windows_2.0.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/fluttertoast-8.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "fuchsia_remote_debug_protocol",
       "rootUri": "file:///C:/src/flutter_windows_2.0.4-stable/flutter/packages/fuchsia_remote_debug_protocol",
       "packageUri": "lib/",
@@ -458,7 +464,7 @@
       "languageVersion": "2.7"
     }
   ],
-  "generated": "2021-05-01T16:19:48.202094Z",
+  "generated": "2021-05-02T08:15:51.809442Z",
   "generator": "pub",
   "generatorVersion": "2.12.2"
 }

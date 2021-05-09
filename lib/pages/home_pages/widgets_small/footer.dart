@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_palm_project/utils/constant.dart';
 import 'package:the_palm_project/utils/social__media__icons_icons.dart';
 
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'dart:html' as html;
 
 class Footer extends StatelessWidget {

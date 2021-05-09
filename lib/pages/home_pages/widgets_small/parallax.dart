@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flip_card/flip_card.dart';
-import 'dart:html' as html;
+
 
 class Parallax extends StatefulWidget {
   const Parallax({
