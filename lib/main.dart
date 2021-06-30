@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
-
-
 import 'pages/payment_pages/payment_page1.dart';
 
-void main() {
+void main(){
+ 
   runApp(MyApp());
 }
 

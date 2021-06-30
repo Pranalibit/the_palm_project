@@ -1,15 +1,51 @@
-define(['dart_sdk', 'packages/characters/src/grapheme_clusters/table.dart'], (function load__packages__characters__src__grapheme_clusters__breaks_dart(dart_sdk, packages__characters__src__grapheme_clusters__table$46dart) {
+define(['dart_sdk', 'packages/flutter/src/gestures/resampler.dart', 'packages/flutter/src/scheduler/binding.dart', 'packages/flutter/src/gestures/debug.dart', 'packages/flutter/src/foundation/print.dart', 'packages/flutter/src/gestures/events.dart', 'packages/flutter/src/gestures/pointer_router.dart', 'packages/flutter/src/gestures/arena.dart', 'packages/flutter/src/gestures/pointer_signal_resolver.dart', 'packages/flutter/src/gestures/hit_test.dart', 'packages/flutter/src/gestures/converter.dart', 'packages/flutter/src/foundation/debug.dart', 'packages/flutter/src/foundation/binding.dart'], (function load__packages__flutter__src__gestures__binding_dart(dart_sdk, packages__flutter__src__gestures__resampler$46dart, packages__flutter__src__scheduler__binding$46dart, packages__flutter__src__gestures__debug$46dart, packages__flutter__src__foundation__print$46dart, packages__flutter__src__gestures__events$46dart, packages__flutter__src__gestures__pointer_router$46dart, packages__flutter__src__gestures__arena$46dart, packages__flutter__src__gestures__pointer_signal_resolver$46dart, packages__flutter__src__gestures__hit_test$46dart, packages__flutter__src__gestures__converter$46dart, packages__flutter__src__foundation__debug$46dart, packages__flutter__src__foundation__binding$46dart) {
   'use strict';
   const core = dart_sdk.core;
+  const _js_helper = dart_sdk._js_helper;
+  const ui = dart_sdk.ui;
+  const collection = dart_sdk.collection;
+  const async = dart_sdk.async;
+  const _internal = dart_sdk._internal;
   const dart = dart_sdk.dart;
   const dartx = dart_sdk.dartx;
-  const table = packages__characters__src__grapheme_clusters__table$46dart.src__grapheme_clusters__table;
-  var breaks = Object.create(dart.library);
-  var $codeUnitAt = dartx.codeUnitAt;
-  var $toRadixString = dartx.toRadixString;
+  const resampler$ = packages__flutter__src__gestures__resampler$46dart.src__gestures__resampler;
+  const binding = packages__flutter__src__scheduler__binding$46dart.src__scheduler__binding;
+  const debug = packages__flutter__src__gestures__debug$46dart.src__gestures__debug;
+  const print = packages__flutter__src__foundation__print$46dart.src__foundation__print;
+  const events = packages__flutter__src__gestures__events$46dart.src__gestures__events;
+  const pointer_router = packages__flutter__src__gestures__pointer_router$46dart.src__gestures__pointer_router;
+  const arena = packages__flutter__src__gestures__arena$46dart.src__gestures__arena;
+  const pointer_signal_resolver = packages__flutter__src__gestures__pointer_signal_resolver$46dart.src__gestures__pointer_signal_resolver;
+  const hit_test = packages__flutter__src__gestures__hit_test$46dart.src__gestures__hit_test;
+  const converter = packages__flutter__src__gestures__converter$46dart.src__gestures__converter;
+  const assertions = packages__flutter__src__foundation__debug$46dart.src__foundation__assertions;
+  const diagnostics = packages__flutter__src__foundation__debug$46dart.src__foundation__diagnostics;
+  const binding$ = packages__flutter__src__foundation__binding$46dart.src__foundation__binding;
+  var binding$0 = Object.create(dart.library);
+  var $putIfAbsent = dartx.putIfAbsent;
+  var $values = dartx.values;
+  var $removeWhere = dartx.removeWhere;
+  var $isNotEmpty = dartx.isNotEmpty;
+  var $clear = dartx.clear;
+  var $isEmpty = dartx.isEmpty;
+  var $containsKey = dartx.containsKey;
+  var $_set = dartx._set;
+  var $remove = dartx.remove;
+  var $_get = dartx._get;
   dart._checkModuleNullSafetyMode(false);
   var T = {
-    _: () => T
+    IdentityMapOfint$PointerEventResampler: () => (T.IdentityMapOfint$PointerEventResampler = dart.constFn(_js_helper.IdentityMap$(core.int, resampler$.PointerEventResampler)))(),
+    VoidToPointerEventResampler: () => (T.VoidToPointerEventResampler = dart.constFn(dart.fnType(resampler$.PointerEventResampler, [])))(),
+    intAndPointerEventResamplerTobool: () => (T.intAndPointerEventResamplerTobool = dart.constFn(dart.fnType(core.bool, [core.int, resampler$.PointerEventResampler])))(),
+    VoidTobool: () => (T.VoidTobool = dart.constFn(dart.fnType(core.bool, [])))(),
+    DurationTovoid: () => (T.DurationTovoid = dart.constFn(dart.fnType(dart.void, [core.Duration])))(),
+    ListQueueOfPointerEvent: () => (T.ListQueueOfPointerEvent = dart.constFn(collection.ListQueue$(events.PointerEvent)))(),
+    IdentityMapOfint$HitTestResult: () => (T.IdentityMapOfint$HitTestResult = dart.constFn(_js_helper.IdentityMap$(core.int, hit_test.HitTestResult)))(),
+    DiagnosticsPropertyOfPointerEvent: () => (T.DiagnosticsPropertyOfPointerEvent = dart.constFn(diagnostics.DiagnosticsProperty$(events.PointerEvent)))(),
+    SyncIterableOfDiagnosticsNode: () => (T.SyncIterableOfDiagnosticsNode = dart.constFn(_js_helper.SyncIterable$(diagnostics.DiagnosticsNode)))(),
+    IterableOfDiagnosticsNode: () => (T.IterableOfDiagnosticsNode = dart.constFn(core.Iterable$(diagnostics.DiagnosticsNode)))(),
+    VoidToIterableOfDiagnosticsNode: () => (T.VoidToIterableOfDiagnosticsNode = dart.constFn(dart.fnType(T.IterableOfDiagnosticsNode(), [])))(),
+    DiagnosticsPropertyOfHitTestTarget: () => (T.DiagnosticsPropertyOfHitTestTarget = dart.constFn(diagnostics.DiagnosticsProperty$(hit_test.HitTestTarget)))()
   };
   var T$Eval = Object.assign({
     _: () => T$Eval
@@ -23,391 +59,415 @@ define(['dart_sdk', 'packages/characters/src/grapheme_clusters/table.dart'], (fu
   const CT = Object.create({
     _: () => (C, CT)
   });
-  var C = [];
+  dart.defineLazy(CT, {
+    get C0() {
+      return C[0] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: -38000
+      });
+    },
+    get C1() {
+      return C[1] = dart.const({
+        __proto__: core.Duration.prototype,
+        [Duration__duration]: 16667
+      });
+    }
+  }, false);
+  var C = Array(2).fill(void 0);
   var I = [
-    "file:///C:/src/flutter_windows_2.0.4-stable/flutter/.pub-cache/hosted/pub.dartlang.org/characters-1.1.0/lib/src/grapheme_clusters/breaks.dart",
-    "package:characters/src/grapheme_clusters/breaks.dart"
+    "file:///C:/src/flutter_windows_2.0.4-stable/flutter/packages/flutter/lib/src/gestures/binding.dart",
+    "package:flutter/src/gestures/binding.dart"
   ];
-  var base$ = dart.privateName(breaks, "Breaks.base");
-  var end$ = dart.privateName(breaks, "Breaks.end");
-  var cursor$ = dart.privateName(breaks, "Breaks.cursor");
-  var state$ = dart.privateName(breaks, "Breaks.state");
-  breaks.Breaks = class Breaks extends core.Object {
-    get base() {
-      return this[base$];
-    }
-    set base(value) {
-      super.base = value;
-    }
-    get end() {
-      return this[end$];
-    }
-    set end(value) {
-      super.end = value;
-    }
-    get cursor() {
-      return this[cursor$];
-    }
-    set cursor(value) {
-      this[cursor$] = value;
-    }
-    get state() {
-      return this[state$];
-    }
-    set state(value) {
-      this[state$] = value;
-    }
-    copy() {
-      return new breaks.Breaks.new(this.base, this.cursor, this.end, this.state);
-    }
-    nextBreak() {
+  var _resamplers = dart.privateName(binding$0, "_resamplers");
+  var _frameCallbackScheduled = dart.privateName(binding$0, "_frameCallbackScheduled");
+  var _frameTime = dart.privateName(binding$0, "_frameTime");
+  var _lastSampleTime = dart.privateName(binding$0, "_lastSampleTime");
+  var _lastEventTime = dart.privateName(binding$0, "_lastEventTime");
+  var _handlePointerEvent$ = dart.privateName(binding$0, "_handlePointerEvent");
+  var _handleSampleTimeChanged$ = dart.privateName(binding$0, "_handleSampleTimeChanged");
+  binding$0._Resampler = class _Resampler extends core.Object {
+    addOrDispatch(event) {
       let t0;
-      while (dart.notNull(this.cursor) < dart.notNull(this.end)) {
-        let breakAt = this.cursor;
-        let char = this.base[$codeUnitAt]((t0 = this.cursor, this.cursor = dart.notNull(t0) + 1, t0));
-        if ((char & 64512) !== 55296) {
-          this.state = table.move(this.state, table.low(char));
-          if ((dart.notNull(this.state) & 1) === 0) {
-            return breakAt;
-          }
-          continue;
-        }
-        let category = 2;
-        if (dart.notNull(this.cursor) < dart.notNull(this.end)) {
-          let nextChar = this.base[$codeUnitAt](this.cursor);
-          if ((nextChar & 64512) === 56320) {
-            category = table.high(char, nextChar);
-            this.cursor = dart.notNull(this.cursor) + 1;
-          }
-        }
-        this.state = table.move(this.state, category);
-        if ((dart.notNull(this.state) & 1) === 0) {
-          return breakAt;
-        }
-      }
-      this.state = table.move(this.state, 15);
-      if ((dart.notNull(this.state) & 1) === 0) return this.cursor;
-      return -1;
-    }
-  };
-  (breaks.Breaks.new = function(base, cursor, end, state) {
-    if (base == null) dart.nullFailed(I[0], 37, 15, "base");
-    if (cursor == null) dart.nullFailed(I[0], 37, 26, "cursor");
-    if (end == null) dart.nullFailed(I[0], 37, 39, "end");
-    if (state == null) dart.nullFailed(I[0], 37, 49, "state");
-    this[base$] = base;
-    this[cursor$] = cursor;
-    this[end$] = end;
-    this[state$] = state;
-    ;
-  }).prototype = breaks.Breaks.prototype;
-  dart.addTypeTests(breaks.Breaks);
-  dart.addTypeCaches(breaks.Breaks);
-  dart.setMethodSignature(breaks.Breaks, () => ({
-    __proto__: dart.getMethods(breaks.Breaks.__proto__),
-    copy: dart.fnType(breaks.Breaks, []),
-    nextBreak: dart.fnType(core.int, [])
-  }));
-  dart.setLibraryUri(breaks.Breaks, I[1]);
-  dart.setFieldSignature(breaks.Breaks, () => ({
-    __proto__: dart.getFields(breaks.Breaks.__proto__),
-    base: dart.finalFieldType(core.String),
-    end: dart.finalFieldType(core.int),
-    cursor: dart.fieldType(core.int),
-    state: dart.fieldType(core.int)
-  }));
-  var base$0 = dart.privateName(breaks, "BackBreaks.base");
-  var start$ = dart.privateName(breaks, "BackBreaks.start");
-  var cursor$0 = dart.privateName(breaks, "BackBreaks.cursor");
-  var state$0 = dart.privateName(breaks, "BackBreaks.state");
-  var _lookAhead = dart.privateName(breaks, "_lookAhead");
-  breaks.BackBreaks = class BackBreaks extends core.Object {
-    get base() {
-      return this[base$0];
-    }
-    set base(value) {
-      super.base = value;
-    }
-    get start() {
-      return this[start$];
-    }
-    set start(value) {
-      super.start = value;
-    }
-    get cursor() {
-      return this[cursor$0];
-    }
-    set cursor(value) {
-      this[cursor$0] = value;
-    }
-    get state() {
-      return this[state$0];
-    }
-    set state(value) {
-      this[state$0] = value;
-    }
-    copy() {
-      return new breaks.BackBreaks.new(this.base, this.cursor, this.start, this.state);
-    }
-    nextBreak() {
-      while (dart.notNull(this.cursor) > dart.notNull(this.start)) {
-        let breakAt = this.cursor;
-        let char = this.base[$codeUnitAt](this.cursor = dart.notNull(this.cursor) - 1);
-        if ((char & 64512) !== 56320) {
-          this.state = table.moveBack(this.state, table.low(char));
-          if (dart.notNull(this.state) >= 208) this.state = this[_lookAhead](this.state);
-          if ((dart.notNull(this.state) & 1) === 0) {
-            return breakAt;
-          }
-          continue;
-        }
-        let category = 2;
-        if (dart.notNull(this.cursor) >= dart.notNull(this.start)) {
-          let prevChar = this.base[$codeUnitAt](dart.notNull(this.cursor) - 1);
-          if ((prevChar & 64512) === 55296) {
-            category = table.high(prevChar, char);
-            this.cursor = dart.notNull(this.cursor) - 1;
-          }
-        }
-        this.state = table.moveBack(this.state, category);
-        if (dart.notNull(this.state) >= 208) this.state = this[_lookAhead](this.state);
-        if ((dart.notNull(this.state) & 1) === 0) {
-          return breakAt;
-        }
-      }
-      this.state = table.moveBack(this.state, 15);
-      if (dart.notNull(this.state) >= 208) this.state = this[_lookAhead](this.state);
-      if ((dart.notNull(this.state) & 1) === 0) return this.cursor;
-      return -1;
-    }
-    [_lookAhead](state) {
-      if (state == null) dart.nullFailed(I[0], 146, 22, "state");
-      return breaks.lookAhead(this.base, this.start, this.cursor, state);
-    }
-  };
-  (breaks.BackBreaks.new = function(base, cursor, start, state) {
-    if (base == null) dart.nullFailed(I[0], 105, 19, "base");
-    if (cursor == null) dart.nullFailed(I[0], 105, 30, "cursor");
-    if (start == null) dart.nullFailed(I[0], 105, 43, "start");
-    if (state == null) dart.nullFailed(I[0], 105, 55, "state");
-    this[base$0] = base;
-    this[cursor$0] = cursor;
-    this[start$] = start;
-    this[state$0] = state;
-    ;
-  }).prototype = breaks.BackBreaks.prototype;
-  dart.addTypeTests(breaks.BackBreaks);
-  dart.addTypeCaches(breaks.BackBreaks);
-  dart.setMethodSignature(breaks.BackBreaks, () => ({
-    __proto__: dart.getMethods(breaks.BackBreaks.__proto__),
-    copy: dart.fnType(breaks.BackBreaks, []),
-    nextBreak: dart.fnType(core.int, []),
-    [_lookAhead]: dart.fnType(core.int, [core.int])
-  }));
-  dart.setLibraryUri(breaks.BackBreaks, I[1]);
-  dart.setFieldSignature(breaks.BackBreaks, () => ({
-    __proto__: dart.getFields(breaks.BackBreaks.__proto__),
-    base: dart.finalFieldType(core.String),
-    start: dart.finalFieldType(core.int),
-    cursor: dart.fieldType(core.int),
-    state: dart.fieldType(core.int)
-  }));
-  breaks.lookAhead = function lookAhead(base, start, cursor, state) {
-    if (base == null) dart.nullFailed(I[0], 155, 22, "base");
-    if (start == null) dart.nullFailed(I[0], 155, 32, "start");
-    if (cursor == null) dart.nullFailed(I[0], 155, 43, "cursor");
-    if (state == null) dart.nullFailed(I[0], 155, 55, "state");
-    if (!(dart.notNull(state) >= 208)) dart.assertFailed(null, I[0], 156, 10, "state >= stateLookaheadMin");
-    if (state === 208) {
-      return breaks.lookAheadRegional(base, start, cursor);
-    }
-    if (state === 224) {
-      let prevPic = breaks.lookAheadPictorgraphicExtend(base, start, cursor);
-      if (dart.notNull(prevPic) >= 0) return (144 | 1) >>> 0;
-      return 64;
-    }
-    dart.throw(new core.StateError.new("Unexpected state: " + state[$toRadixString](16)));
-  };
-  breaks.lookAheadRegional = function lookAheadRegional(base, start, cursor) {
-    if (base == null) dart.nullFailed(I[0], 178, 30, "base");
-    if (start == null) dart.nullFailed(I[0], 178, 40, "start");
-    if (cursor == null) dart.nullFailed(I[0], 178, 51, "cursor");
-    let count = 0;
-    let index = cursor;
-    while (dart.notNull(index) - 2 >= dart.notNull(start)) {
-      let tail = base[$codeUnitAt](dart.notNull(index) - 1);
-      if ((tail & 64512) !== 56320) break;
-      let lead = base[$codeUnitAt](dart.notNull(index) - 2);
-      if ((lead & 64512) !== 55296) break;
-      let category = table.high(lead, tail);
-      if (category !== 6) break;
-      index = dart.notNull(index) - 2;
-      count = (count ^ 1) >>> 0;
-    }
-    if (count === 0) {
-      return (192 | 1) >>> 0;
-    } else {
-      return 144;
-    }
-  };
-  breaks.lookAheadPictorgraphicExtend = function lookAheadPictorgraphicExtend(base, start, cursor) {
-    if (base == null) dart.nullFailed(I[0], 208, 41, "base");
-    if (start == null) dart.nullFailed(I[0], 208, 51, "start");
-    if (cursor == null) dart.nullFailed(I[0], 208, 62, "cursor");
-    let index = cursor;
-    while (dart.notNull(index) > dart.notNull(start)) {
-      let char = base[$codeUnitAt](index = dart.notNull(index) - 1);
-      let prevChar = 0;
-      let category = 2;
-      if ((char & 64512) !== 56320) {
-        category = table.low(char);
-      } else if (dart.notNull(index) > dart.notNull(start) && ((prevChar = base[$codeUnitAt](index = dart.notNull(index) - 1)) & 64512) === 55296) {
-        category = table.high(prevChar, char);
+      if (event == null) dart.nullFailed(I[0], 55, 35, "event");
+      let scheduler = binding.SchedulerBinding.instance;
+      if (!(scheduler != null)) dart.assertFailed(null, I[0], 57, 12, "scheduler != null");
+      if (event.kind == ui.PointerDeviceKind.touch) {
+        this[_lastEventTime] = event.timeStamp;
+        let resampler = this[_resamplers][$putIfAbsent](event.device, dart.fn(() => new resampler$.PointerEventResampler.new(), T.VoidToPointerEventResampler()));
+        resampler.addEvent(event);
       } else {
-        break;
+        t0 = event;
+        this[_handlePointerEvent$](t0);
       }
-      if (category === 7) {
-        return index;
-      }
-      if (category !== 4) break;
     }
-    return -1;
-  };
-  breaks.isGraphemeClusterBoundary = function isGraphemeClusterBoundary(text, start, end, index) {
-    if (text == null) dart.nullFailed(I[0], 236, 39, "text");
-    if (start == null) dart.nullFailed(I[0], 236, 49, "start");
-    if (end == null) dart.nullFailed(I[0], 236, 60, "end");
-    if (index == null) dart.nullFailed(I[0], 236, 69, "index");
-    if (!(0 <= dart.notNull(start))) dart.assertFailed(null, I[0], 237, 10, "0 <= start");
-    if (!(dart.notNull(start) <= dart.notNull(index))) dart.assertFailed(null, I[0], 238, 10, "start <= index");
-    if (!(dart.notNull(index) <= dart.notNull(end))) dart.assertFailed(null, I[0], 239, 10, "index <= end");
-    if (!(dart.notNull(end) <= text.length)) dart.assertFailed(null, I[0], 240, 10, "end <= text.length");
-    if (dart.notNull(start) < dart.notNull(index) && dart.notNull(index) < dart.notNull(end)) {
-      let char = text[$codeUnitAt](index);
-      let prevChar = text[$codeUnitAt](dart.notNull(index) - 1);
-      let catAfter = 2;
-      if ((char & 63488) !== 55296) {
-        catAfter = table.low(char);
-      } else if ((char & 64512) === 55296) {
-        if (dart.notNull(index) + 1 >= dart.notNull(end)) return true;
-        let nextChar = text[$codeUnitAt](dart.notNull(index) + 1);
-        if ((nextChar & 64512) !== 56320) return true;
-        catAfter = table.high(char, nextChar);
-      } else {
-        return (prevChar & 64512) !== 55296;
+    sample(samplingOffset, samplingInterval) {
+      let t0;
+      if (samplingOffset == null) dart.nullFailed(I[0], 81, 24, "samplingOffset");
+      if (samplingInterval == null) dart.nullFailed(I[0], 81, 49, "samplingInterval");
+      let scheduler = binding.SchedulerBinding.instance;
+      if (!(scheduler != null)) dart.assertFailed(null, I[0], 83, 12, "scheduler != null");
+      let sampleTime = this[_frameTime]['+'](samplingOffset);
+      let nextSampleTime = sampleTime['+'](samplingInterval);
+      for (let resampler of this[_resamplers][$values]) {
+        resampler.sample(sampleTime, nextSampleTime, this[_handlePointerEvent$]);
       }
-      let catBefore = 2;
-      if ((prevChar & 64512) !== 56320) {
-        catBefore = table.low(prevChar);
-        index = dart.notNull(index) - 1;
-      } else {
-        index = dart.notNull(index) - 2;
-        if (dart.notNull(start) <= dart.notNull(index)) {
-          let prevPrevChar = text[$codeUnitAt](index);
-          if ((prevPrevChar & 64512) !== 55296) {
+      this[_resamplers][$removeWhere](dart.fn((key, resampler) => {
+        if (key == null) dart.nullFailed(I[0], 102, 34, "key");
+        if (resampler == null) dart.nullFailed(I[0], 102, 61, "resampler");
+        return !dart.test(resampler.hasPendingEvents) && !dart.test(resampler.isDown);
+      }, T.intAndPointerEventResamplerTobool()));
+      this[_lastSampleTime] = sampleTime;
+      if (!dart.test(this[_frameCallbackScheduled]) && dart.test(this[_resamplers][$isNotEmpty])) {
+        this[_frameCallbackScheduled] = true;
+        t0 = scheduler;
+        t0 == null ? null : t0.scheduleFrameCallback(dart.fn(_ => {
+          if (_ == null) dart.nullFailed(I[0], 112, 41, "_");
+          this[_frameCallbackScheduled] = false;
+          this[_frameTime] = scheduler.currentSystemFrameTimeStamp;
+          if (!dart.test(dart.fn(() => {
+            if (dart.test(debug.debugPrintResamplingMargin)) {
+              let resamplingMargin = this[_lastEventTime]['-'](this[_lastSampleTime]);
+              print.debugPrint(dart.str(resamplingMargin));
+            }
             return true;
-          }
-          catBefore = table.high(prevPrevChar, prevChar);
-        } else {
+          }, T.VoidTobool())())) dart.assertFailed(null, I[0], 118, 16, "() {\r\n          if (debugPrintResamplingMargin) {\r\n            final Duration resamplingMargin = _lastEventTime - _lastSampleTime;\r\n              debugPrint('$resamplingMargin');\r\n          }\r\n          return true;\r\n        }()");
+          this[_handleSampleTimeChanged$]();
+        }, T.DurationTovoid()));
+      }
+    }
+    stop() {
+      for (let resampler of this[_resamplers][$values]) {
+        resampler.stop(this[_handlePointerEvent$]);
+      }
+      this[_resamplers][$clear]();
+    }
+  };
+  (binding$0._Resampler.new = function(_handlePointerEvent, _handleSampleTimeChanged) {
+    if (_handlePointerEvent == null) dart.nullFailed(I[0], 30, 19, "_handlePointerEvent");
+    if (_handleSampleTimeChanged == null) dart.nullFailed(I[0], 30, 45, "_handleSampleTimeChanged");
+    this[_resamplers] = new (T.IdentityMapOfint$PointerEventResampler()).new();
+    this[_frameCallbackScheduled] = false;
+    this[_frameTime] = core.Duration.zero;
+    this[_lastSampleTime] = core.Duration.zero;
+    this[_lastEventTime] = core.Duration.zero;
+    this[_handlePointerEvent$] = _handlePointerEvent;
+    this[_handleSampleTimeChanged$] = _handleSampleTimeChanged;
+    ;
+  }).prototype = binding$0._Resampler.prototype;
+  dart.addTypeTests(binding$0._Resampler);
+  dart.addTypeCaches(binding$0._Resampler);
+  dart.setMethodSignature(binding$0._Resampler, () => ({
+    __proto__: dart.getMethods(binding$0._Resampler.__proto__),
+    addOrDispatch: dart.fnType(dart.void, [events.PointerEvent]),
+    sample: dart.fnType(dart.void, [core.Duration, core.Duration]),
+    stop: dart.fnType(dart.void, [])
+  }));
+  dart.setLibraryUri(binding$0._Resampler, I[1]);
+  dart.setFieldSignature(binding$0._Resampler, () => ({
+    __proto__: dart.getFields(binding$0._Resampler.__proto__),
+    [_resamplers]: dart.finalFieldType(core.Map$(core.int, resampler$.PointerEventResampler)),
+    [_frameCallbackScheduled]: dart.fieldType(core.bool),
+    [_frameTime]: dart.fieldType(core.Duration),
+    [_lastSampleTime]: dart.fieldType(core.Duration),
+    [_lastEventTime]: dart.fieldType(core.Duration),
+    [_handlePointerEvent$]: dart.finalFieldType(dart.fnType(dart.void, [events.PointerEvent])),
+    [_handleSampleTimeChanged$]: dart.finalFieldType(dart.fnType(dart.void, []))
+  }));
+  var pointerRouter = dart.privateName(binding$0, "GestureBinding.pointerRouter");
+  var gestureArena = dart.privateName(binding$0, "GestureBinding.gestureArena");
+  var pointerSignalResolver = dart.privateName(binding$0, "GestureBinding.pointerSignalResolver");
+  var resamplingEnabled = dart.privateName(binding$0, "GestureBinding.resamplingEnabled");
+  var samplingOffset = dart.privateName(binding$0, "GestureBinding.samplingOffset");
+  var _pendingPointerEvents = dart.privateName(binding$0, "_pendingPointerEvents");
+  var _hitTests = dart.privateName(binding$0, "_hitTests");
+  var __GestureBinding__resampler = dart.privateName(binding$0, "_#GestureBinding#_resampler");
+  var __GestureBinding__resampler_isSet = dart.privateName(binding$0, "_#GestureBinding#_resampler#isSet");
+  var _handlePointerDataPacket = dart.privateName(binding$0, "_handlePointerDataPacket");
+  var _flushPointerEventQueue = dart.privateName(binding$0, "_flushPointerEventQueue");
+  var _resampler = dart.privateName(binding$0, "_resampler");
+  var _handlePointerEventImmediately = dart.privateName(binding$0, "_handlePointerEventImmediately");
+  binding$0.GestureBinding = class GestureBinding extends binding$.BindingBase {
+    static get instance() {
+      return binding$0.GestureBinding._instance;
+    }
+  };
+  binding$0.GestureBinding[dart.mixinOn] = BindingBase => class GestureBinding extends BindingBase {
+    get pointerRouter() {
+      return this[pointerRouter];
+    }
+    set pointerRouter(value) {
+      super.pointerRouter = value;
+    }
+    get gestureArena() {
+      return this[gestureArena];
+    }
+    set gestureArena(value) {
+      super.gestureArena = value;
+    }
+    get pointerSignalResolver() {
+      return this[pointerSignalResolver];
+    }
+    set pointerSignalResolver(value) {
+      super.pointerSignalResolver = value;
+    }
+    get resamplingEnabled() {
+      return this[resamplingEnabled];
+    }
+    set resamplingEnabled(value) {
+      this[resamplingEnabled] = value;
+    }
+    get samplingOffset() {
+      return this[samplingOffset];
+    }
+    set samplingOffset(value) {
+      this[samplingOffset] = value;
+    }
+    initInstances() {
+      super.initInstances();
+      binding$0.GestureBinding._instance = this;
+      this.window.onPointerDataPacket = dart.bind(this, _handlePointerDataPacket);
+    }
+    unlocked() {
+      super.unlocked();
+      this[_flushPointerEventQueue]();
+    }
+    [_handlePointerDataPacket](packet) {
+      if (packet == null) dart.nullFailed(I[0], 216, 54, "packet");
+      this[_pendingPointerEvents].addAll(converter.PointerEventConverter.expand(packet.data, this.window.devicePixelRatio));
+      if (!dart.test(this.locked)) this[_flushPointerEventQueue]();
+    }
+    cancelPointer(pointer) {
+      if (pointer == null) dart.nullFailed(I[0], 228, 26, "pointer");
+      if (dart.test(this[_pendingPointerEvents][$isEmpty]) && !dart.test(this.locked)) async.scheduleMicrotask(dart.bind(this, _flushPointerEventQueue));
+      this[_pendingPointerEvents].addFirst(new events.PointerCancelEvent.new({pointer: pointer}));
+    }
+    [_flushPointerEventQueue]() {
+      if (!!dart.test(this.locked)) dart.assertFailed(null, I[0], 235, 12, "!locked");
+      while (dart.test(this[_pendingPointerEvents][$isNotEmpty]))
+        this.handlePointerEvent(this[_pendingPointerEvents].removeFirst());
+    }
+    handlePointerEvent(event) {
+      if (event == null) dart.nullFailed(I[0], 268, 40, "event");
+      if (!!dart.test(this.locked)) dart.assertFailed(null, I[0], 269, 12, "!locked");
+      if (dart.test(this.resamplingEnabled)) {
+        this[_resampler].addOrDispatch(event);
+        this[_resampler].sample(this.samplingOffset, binding$0._samplingInterval);
+        return;
+      }
+      this[_resampler].stop();
+      this[_handlePointerEventImmediately](event);
+    }
+    [_handlePointerEventImmediately](event) {
+      if (event == null) dart.nullFailed(I[0], 283, 52, "event");
+      let hitTestResult = null;
+      if (events.PointerDownEvent.is(event) || events.PointerSignalEvent.is(event) || events.PointerHoverEvent.is(event)) {
+        if (!!dart.test(this[_hitTests][$containsKey](event.pointer))) dart.assertFailed(null, I[0], 286, 14, "!_hitTests.containsKey(event.pointer)");
+        hitTestResult = new hit_test.HitTestResult.new();
+        this.hitTest(hitTestResult, event.position);
+        if (events.PointerDownEvent.is(event)) {
+          this[_hitTests][$_set](event.pointer, hitTestResult);
+        }
+        if (!dart.test(dart.fn(() => {
+          if (dart.test(debug.debugPrintHitTestResults)) print.debugPrint(dart.str(event) + ": " + dart.str(hitTestResult));
           return true;
+        }, T.VoidTobool())())) dart.assertFailed(null, I[0], 292, 14, "() {\r\n        if (debugPrintHitTestResults)\r\n          debugPrint('$event: $hitTestResult');\r\n        return true;\r\n      }()");
+      } else if (events.PointerUpEvent.is(event) || events.PointerCancelEvent.is(event)) {
+        hitTestResult = this[_hitTests][$remove](event.pointer);
+      } else if (dart.test(event.down)) {
+        hitTestResult = this[_hitTests][$_get](event.pointer);
+      }
+      if (!dart.test(dart.fn(() => {
+        if (dart.test(debug.debugPrintMouseHoverEvents) && events.PointerHoverEvent.is(event)) print.debugPrint(dart.str(event));
+        return true;
+      }, T.VoidTobool())())) dart.assertFailed(null, I[0], 307, 12, "() {\r\n      if (debugPrintMouseHoverEvents && event is PointerHoverEvent)\r\n        debugPrint('$event');\r\n      return true;\r\n    }()");
+      if (hitTestResult != null || events.PointerAddedEvent.is(event) || events.PointerRemovedEvent.is(event)) {
+        if (!(event.position != null)) dart.assertFailed(null, I[0], 315, 14, "event.position != null");
+        this.dispatchEvent(event, hitTestResult);
+      }
+    }
+    hitTest(result, position) {
+      if (result == null) dart.nullFailed(I[0], 322, 30, "result");
+      if (position == null) dart.nullFailed(I[0], 322, 45, "position");
+      result.add(new hit_test.HitTestEntry.new(this));
+    }
+    dispatchEvent(event, hitTestResult) {
+      if (event == null) dart.nullFailed(I[0], 335, 35, "event");
+      if (!!dart.test(this.locked)) dart.assertFailed(null, I[0], 336, 12, "!locked");
+      if (hitTestResult == null) {
+        if (!(events.PointerAddedEvent.is(event) || events.PointerRemovedEvent.is(event))) dart.assertFailed(null, I[0], 341, 14, "event is PointerAddedEvent || event is PointerRemovedEvent");
+        try {
+          this.pointerRouter.route(event);
+        } catch (e) {
+          let exception = dart.getThrown(e);
+          let stack = dart.stackTrace(e);
+          if (core.Object.is(exception)) {
+            assertions.FlutterError.reportError(new binding$0.FlutterErrorDetailsForPointerEventDispatcher.new({exception: exception, stack: stack, library: "gesture library", context: new assertions.ErrorDescription.new("while dispatching a non-hit-tested pointer event"), event: event, hitTestEntry: null, informationCollector: dart.fn(() => new (T.SyncIterableOfDiagnosticsNode()).new(function*() {
+                yield new (T.DiagnosticsPropertyOfPointerEvent()).new("Event", event, {style: diagnostics.DiagnosticsTreeStyle.errorProperty});
+              }), T.VoidToIterableOfDiagnosticsNode())}));
+          } else
+            throw e;
+        }
+        return;
+      }
+      for (let entry of hitTestResult.path) {
+        try {
+          entry.target.handleEvent(event.transformed(entry.transform), entry);
+        } catch (e$) {
+          let exception = dart.getThrown(e$);
+          let stack = dart.stackTrace(e$);
+          if (core.Object.is(exception)) {
+            assertions.FlutterError.reportError(new binding$0.FlutterErrorDetailsForPointerEventDispatcher.new({exception: exception, stack: stack, library: "gesture library", context: new assertions.ErrorDescription.new("while dispatching a pointer event"), event: event, hitTestEntry: entry, informationCollector: dart.fn(() => new (T.SyncIterableOfDiagnosticsNode()).new(function*() {
+                yield new (T.DiagnosticsPropertyOfPointerEvent()).new("Event", event, {style: diagnostics.DiagnosticsTreeStyle.errorProperty});
+                yield new (T.DiagnosticsPropertyOfHitTestTarget()).new("Target", entry.target, {style: diagnostics.DiagnosticsTreeStyle.errorProperty});
+              }), T.VoidToIterableOfDiagnosticsNode())}));
+          } else
+            throw e$;
         }
       }
-      let state = table.moveBack(176, catAfter);
-      if (!(dart.notNull(state) < 208)) dart.assertFailed(null, I[0], 287, 12, "state < stateLookaheadMin");
-      state = table.moveBack(state, catBefore);
-      if (dart.notNull(state) >= 208) {
-        state = breaks.lookAhead(text, start, index, state);
-      }
-      return (dart.notNull(state) & 1) === 0;
     }
-    return start != end;
-  };
-  breaks.previousBreak = function previousBreak(text, start, end, index) {
-    if (text == null) dart.nullFailed(I[0], 300, 26, "text");
-    if (start == null) dart.nullFailed(I[0], 300, 36, "start");
-    if (end == null) dart.nullFailed(I[0], 300, 47, "end");
-    if (index == null) dart.nullFailed(I[0], 300, 56, "index");
-    if (!(0 <= dart.notNull(start))) dart.assertFailed(null, I[0], 301, 10, "0 <= start");
-    if (!(dart.notNull(start) <= dart.notNull(index))) dart.assertFailed(null, I[0], 302, 10, "start <= index");
-    if (!(dart.notNull(index) <= dart.notNull(end))) dart.assertFailed(null, I[0], 303, 10, "index <= end");
-    if (!(dart.notNull(end) <= text.length)) dart.assertFailed(null, I[0], 304, 10, "end <= text.length");
-    if (index == start || index == end) return index;
-    let indexBefore = index;
-    let nextChar = text[$codeUnitAt](index);
-    let category = 2;
-    if ((nextChar & 63488) !== 55296) {
-      category = table.low(nextChar);
-    } else if ((nextChar & 64512) === 55296) {
-      let indexAfter = dart.notNull(index) + 1;
-      if (indexAfter < dart.notNull(end)) {
-        let secondChar = text[$codeUnitAt](indexAfter);
-        if ((secondChar & 64512) === 56320) {
-          category = table.high(nextChar, secondChar);
+    handleEvent(event, entry) {
+      if (event == null) dart.nullFailed(I[0], 380, 33, "event");
+      if (entry == null) dart.nullFailed(I[0], 380, 53, "entry");
+      this.pointerRouter.route(event);
+      if (events.PointerDownEvent.is(event)) {
+        this.gestureArena.close(event.pointer);
+      } else if (events.PointerUpEvent.is(event)) {
+        this.gestureArena.sweep(event.pointer);
+      } else if (events.PointerSignalEvent.is(event)) {
+        this.pointerSignalResolver.resolve(event);
+      }
+    }
+    resetGestureBinding() {
+      this[_hitTests][$clear]();
+    }
+    [_handleSampleTimeChanged$]() {
+      if (!dart.test(this.locked)) {
+        if (dart.test(this.resamplingEnabled)) {
+          this[_resampler].sample(this.samplingOffset, binding$0._samplingInterval);
+        } else {
+          this[_resampler].stop();
         }
       }
-    } else {
-      let prevChar = text[$codeUnitAt](dart.notNull(index) - 1);
-      if ((prevChar & 64512) === 55296) {
-        category = table.high(prevChar, nextChar);
-        indexBefore = dart.notNull(indexBefore) - 1;
-      }
     }
-    return new breaks.BackBreaks.new(text, indexBefore, start, table.moveBack(176, category)).nextBreak();
+    get [_resampler]() {
+      let t3;
+      if (!dart.test(this[__GestureBinding__resampler_isSet])) {
+        let t2 = new binding$0._Resampler.new(dart.bind(this, _handlePointerEventImmediately), dart.bind(this, _handleSampleTimeChanged$));
+        if (dart.test(this[__GestureBinding__resampler_isSet])) dart.throw(new _internal.LateError.fieldADI("_resampler"));
+        this[__GestureBinding__resampler] = t2;
+        this[__GestureBinding__resampler_isSet] = true;
+      }
+      t3 = this[__GestureBinding__resampler];
+      return t3;
+    }
   };
-  breaks.nextBreak = function nextBreak(text, start, end, index) {
-    if (text == null) dart.nullFailed(I[0], 334, 22, "text");
-    if (start == null) dart.nullFailed(I[0], 334, 32, "start");
-    if (end == null) dart.nullFailed(I[0], 334, 43, "end");
-    if (index == null) dart.nullFailed(I[0], 334, 52, "index");
-    if (!(0 <= dart.notNull(start))) dart.assertFailed(null, I[0], 335, 10, "0 <= start");
-    if (!(dart.notNull(start) <= dart.notNull(index))) dart.assertFailed(null, I[0], 336, 10, "start <= index");
-    if (!(dart.notNull(index) <= dart.notNull(end))) dart.assertFailed(null, I[0], 337, 10, "index <= end");
-    if (!(dart.notNull(end) <= text.length)) dart.assertFailed(null, I[0], 338, 10, "end <= text.length");
-    if (index == start || index == end) return index;
-    let indexBefore = dart.notNull(index) - 1;
-    let prevChar = text[$codeUnitAt](indexBefore);
-    let prevCategory = 2;
-    if ((prevChar & 63488) !== 55296) {
-      prevCategory = table.low(prevChar);
-    } else if ((prevChar & 64512) === 55296) {
-      let nextChar = text[$codeUnitAt](index);
-      if ((nextChar & 64512) === 56320) {
-        index = dart.notNull(index) + 1;
-        if (index == end) return end;
-        prevCategory = table.high(prevChar, nextChar);
-      }
-    } else if (indexBefore > dart.notNull(start)) {
-      let secondCharIndex = indexBefore - 1;
-      let secondChar = text[$codeUnitAt](secondCharIndex);
-      if ((secondChar & 64512) === 55296) {
-        indexBefore = secondCharIndex;
-        prevCategory = table.high(secondChar, prevChar);
-      }
+  (binding$0.GestureBinding[dart.mixinNew] = function() {
+    this[_pendingPointerEvents] = new (T.ListQueueOfPointerEvent()).new();
+    this[pointerRouter] = new pointer_router.PointerRouter.new();
+    this[gestureArena] = new arena.GestureArenaManager.new();
+    this[pointerSignalResolver] = new pointer_signal_resolver.PointerSignalResolver.new();
+    this[_hitTests] = new (T.IdentityMapOfint$HitTestResult()).new();
+    this[__GestureBinding__resampler] = null;
+    this[__GestureBinding__resampler_isSet] = false;
+    this[resamplingEnabled] = false;
+    this[samplingOffset] = binding$0._defaultSamplingOffset;
+  }).prototype = binding$0.GestureBinding.prototype;
+  dart.addTypeTests(binding$0.GestureBinding);
+  dart.addTypeCaches(binding$0.GestureBinding);
+  binding$0.GestureBinding[dart.implements] = () => [hit_test.HitTestable, hit_test.HitTestDispatcher, hit_test.HitTestTarget, binding$.BindingBase];
+  dart.setMethodSignature(binding$0.GestureBinding, () => ({
+    __proto__: dart.getMethods(binding$0.GestureBinding.__proto__),
+    [_handlePointerDataPacket]: dart.fnType(dart.void, [ui.PointerDataPacket]),
+    cancelPointer: dart.fnType(dart.void, [core.int]),
+    [_flushPointerEventQueue]: dart.fnType(dart.void, []),
+    handlePointerEvent: dart.fnType(dart.void, [events.PointerEvent]),
+    [_handlePointerEventImmediately]: dart.fnType(dart.void, [events.PointerEvent]),
+    hitTest: dart.fnType(dart.void, [hit_test.HitTestResult, ui.Offset]),
+    dispatchEvent: dart.fnType(dart.void, [events.PointerEvent, dart.nullable(hit_test.HitTestResult)]),
+    handleEvent: dart.fnType(dart.void, [events.PointerEvent, hit_test.HitTestEntry]),
+    resetGestureBinding: dart.fnType(dart.void, []),
+    [_handleSampleTimeChanged$]: dart.fnType(dart.void, [])
+  }));
+  dart.setGetterSignature(binding$0.GestureBinding, () => ({
+    __proto__: dart.getGetters(binding$0.GestureBinding.__proto__),
+    [_resampler]: binding$0._Resampler
+  }));
+  dart.setLibraryUri(binding$0.GestureBinding, I[1]);
+  dart.setFieldSignature(binding$0.GestureBinding, () => ({
+    __proto__: dart.getFields(binding$0.GestureBinding.__proto__),
+    [_pendingPointerEvents]: dart.finalFieldType(collection.Queue$(events.PointerEvent)),
+    pointerRouter: dart.finalFieldType(pointer_router.PointerRouter),
+    gestureArena: dart.finalFieldType(arena.GestureArenaManager),
+    pointerSignalResolver: dart.finalFieldType(pointer_signal_resolver.PointerSignalResolver),
+    [_hitTests]: dart.finalFieldType(core.Map$(core.int, hit_test.HitTestResult)),
+    [__GestureBinding__resampler]: dart.fieldType(dart.nullable(binding$0._Resampler)),
+    [__GestureBinding__resampler_isSet]: dart.fieldType(core.bool),
+    resamplingEnabled: dart.fieldType(core.bool),
+    samplingOffset: dart.fieldType(core.Duration)
+  }));
+  dart.defineLazy(binding$0.GestureBinding, {
+    /*binding$0.GestureBinding._instance*/get _instance() {
+      return null;
+    },
+    set _instance(_) {}
+  }, false);
+  var event$ = dart.privateName(binding$0, "FlutterErrorDetailsForPointerEventDispatcher.event");
+  var hitTestEntry$ = dart.privateName(binding$0, "FlutterErrorDetailsForPointerEventDispatcher.hitTestEntry");
+  binding$0.FlutterErrorDetailsForPointerEventDispatcher = class FlutterErrorDetailsForPointerEventDispatcher extends assertions.FlutterErrorDetails {
+    get event() {
+      return this[event$];
     }
-    let state = 48;
-    if (prevCategory === 6) {
-      let prevState = breaks.lookAheadRegional(text, start, indexBefore);
-      if (prevState !== 144) {
-        state = 160;
-      }
-    } else if (prevCategory === 1 || prevCategory === 4) {
-      let prevPic = breaks.lookAheadPictorgraphicExtend(text, start, indexBefore);
-      if (dart.notNull(prevPic) >= 0) {
-        state = prevCategory === 1 ? 144 : 128;
-      }
-    } else {
-      state = table.move(176, prevCategory);
+    set event(value) {
+      super.event = value;
     }
-    return new breaks.Breaks.new(text, index, text.length, state).nextBreak();
+    get hitTestEntry() {
+      return this[hitTestEntry$];
+    }
+    set hitTestEntry(value) {
+      super.hitTestEntry = value;
+    }
   };
-  dart.trackLibraries("packages/characters/src/grapheme_clusters/breaks.dart", {
-    "package:characters/src/grapheme_clusters/breaks.dart": breaks
+  (binding$0.FlutterErrorDetailsForPointerEventDispatcher.new = function(opts) {
+    let exception = opts && 'exception' in opts ? opts.exception : null;
+    if (exception == null) dart.nullFailed(I[0], 448, 21, "exception");
+    let stack = opts && 'stack' in opts ? opts.stack : null;
+    let library = opts && 'library' in opts ? opts.library : null;
+    let context = opts && 'context' in opts ? opts.context : null;
+    let event = opts && 'event' in opts ? opts.event : null;
+    let hitTestEntry = opts && 'hitTestEntry' in opts ? opts.hitTestEntry : null;
+    let informationCollector = opts && 'informationCollector' in opts ? opts.informationCollector : null;
+    let silent = opts && 'silent' in opts ? opts.silent : false;
+    if (silent == null) dart.nullFailed(I[0], 455, 10, "silent");
+    this[event$] = event;
+    this[hitTestEntry$] = hitTestEntry;
+    binding$0.FlutterErrorDetailsForPointerEventDispatcher.__proto__.new.call(this, {exception: exception, stack: stack, library: library, context: context, informationCollector: informationCollector, silent: silent});
+    ;
+  }).prototype = binding$0.FlutterErrorDetailsForPointerEventDispatcher.prototype;
+  dart.addTypeTests(binding$0.FlutterErrorDetailsForPointerEventDispatcher);
+  dart.addTypeCaches(binding$0.FlutterErrorDetailsForPointerEventDispatcher);
+  dart.setLibraryUri(binding$0.FlutterErrorDetailsForPointerEventDispatcher, I[1]);
+  dart.setFieldSignature(binding$0.FlutterErrorDetailsForPointerEventDispatcher, () => ({
+    __proto__: dart.getFields(binding$0.FlutterErrorDetailsForPointerEventDispatcher.__proto__),
+    event: dart.finalFieldType(dart.nullable(events.PointerEvent)),
+    hitTestEntry: dart.finalFieldType(dart.nullable(hit_test.HitTestEntry))
+  }));
+  var Duration__duration = dart.privateName(core, "Duration._duration");
+  dart.defineLazy(binding$0, {
+    /*binding$0._defaultSamplingOffset*/get _defaultSamplingOffset() {
+      return C[0] || CT.C0;
+    },
+    /*binding$0._samplingInterval*/get _samplingInterval() {
+      return C[1] || CT.C1;
+    }
+  }, false);
+  dart.trackLibraries("packages/flutter/src/gestures/binding.dart", {
+    "package:flutter/src/gestures/binding.dart": binding$0
   }, {
-  }, '{"version":3,"sourceRoot":"","sources":["breaks.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../../../E:/packages/characters/src/grapheme_clusters/breaks.dart.lib.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["binding.dart"],"names":[],"mappings":"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","file":"../../../../../../../../../D:/packages/flutter/src/gestures/binding.dart.lib.js"}');
   // Exports:
   return {
-    src__grapheme_clusters__breaks: breaks
+    src__gestures__binding: binding$0
   };
 }));
 
-//# sourceMappingURL=breaks.dart.lib.js.map
+//# sourceMappingURL=binding.dart.lib.js.map

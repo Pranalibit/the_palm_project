@@ -18,11 +18,17 @@ dependencies:
   flutter_screenutil: ^4.0.3+1
   auto_animated: ^2.1.0
   flip_card: ^0.4.4
-  intl: ^0.17.0
+  intl: ^0.16.1
   provider: ^5.0.0
-  firebase_auth:
-  firebase_core:
+  firebase_core: ^0.5.0
+  firebase_auth: ^0.18.0+1
   fluttertoast: ^8.0.6
+  google_sign_in:
+  shared_preferences: ^2.0.6
+  http:
+      
+
+
     
 
 
@@ -43,6 +49,8 @@ flutter:
     - assets/images/
     - assets/gallery/
     - assets/Logo.svg
+    
+    
 
   fonts:
     - family: FjallaOne

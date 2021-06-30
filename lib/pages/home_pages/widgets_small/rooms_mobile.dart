@@ -43,7 +43,6 @@ class MyStatefulWidget extends StatefulWidget {
 
 /// This is the private State class that goes with MyStatefulWidget.
 class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  int _count = 0;
   Color c1 = Colors.black;
   Color t1 = Colors.white;
   int i = 0;
