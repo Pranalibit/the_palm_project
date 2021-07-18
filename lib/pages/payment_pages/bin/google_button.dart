@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:the_palm_project/pages/payment_pages/widgets/model.dart';
 
 
-import 'authentication.dart';
+import '../widgets/authentication.dart';
 
 class GoogleButton extends StatefulWidget {
   @override
@@ -41,7 +41,7 @@ class _GoogleButtonState extends State<GoogleButton> {
               Navigator.of(context).pop();
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
-                    fullscreenDialog: true, builder: (context) => Payment()),
+                    builder: (context) => Payment()),
               );
             }
           }).catchError((error) {

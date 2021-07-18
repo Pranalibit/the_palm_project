@@ -19,7 +19,9 @@ class _HotelRoomState extends State<HotelRoom> {
       children: [
         Headings(text: 'Rooms'),
         Padding(
-          padding: const EdgeInsets.only(left: 85.0),
+          padding: const EdgeInsets.only(
+            left: 85.0,
+          ),
           child: Container(
             height: 300.0,
             width: 300.0,
@@ -43,8 +45,7 @@ class _HotelRoomState extends State<HotelRoom> {
                         ),
                         onPressed: () {
                           setState(() {
-                            costOfStandard();
-                            costOfTax();
+                            
                             incrementRoom("Standard");
                             CheckOut();
                           });
@@ -61,8 +62,7 @@ class _HotelRoomState extends State<HotelRoom> {
                         ),
                         onPressed: () {
                           setState(() {
-                            costOfStandard();
-                            costOfTax();
+                            
                             if (standardCounter.value <= 0) {
                             } else {
                               standardCounter.value--;
@@ -88,8 +88,7 @@ class _HotelRoomState extends State<HotelRoom> {
                         ),
                         onPressed: () {
                           setState(() {
-                            costOfBamboo();
-                            costOfTax();
+                           
                             incrementRoom("Bamboo");
                             CheckOut();
                           });
@@ -106,8 +105,7 @@ class _HotelRoomState extends State<HotelRoom> {
                         ),
                         onPressed: () {
                           setState(() {
-                            costOfBamboo();
-                            costOfTax();
+                            
                             if (bambooCounter.value <= 0) {
                             } else {
                               bambooCounter.value--;
@@ -133,12 +131,10 @@ class _HotelRoomState extends State<HotelRoom> {
                         ),
                         onPressed: () {
                           setState(() {
-                            costOfDeluxe();
-                            costOfTax();
+                            
                             print("Incrment Button Pressed for deluxe");
                             incrementRoom("Deluxe");
-                            print(
-                                "Deluxe Counter $deluxeCounter");
+                            print("Deluxe Counter $deluxeCounter");
                             print("Incremetn room deluxe func implemented");
                             CheckOut();
                           });
@@ -155,16 +151,14 @@ class _HotelRoomState extends State<HotelRoom> {
                         ),
                         onPressed: () {
                           setState(() {
-                            costOfDeluxe();
-                            costOfTax();
+                            
                             if (deluxeCounter.value <= 0) {
                             } else {
                               deluxeCounter.value--;
                             }
 
                             decrementRoom("Deluxe");
-                            print(
-                                "Deluxe Counter $deluxeCounter");
+                            print("Deluxe Counter $deluxeCounter");
                             CheckOut();
                           });
                         }),

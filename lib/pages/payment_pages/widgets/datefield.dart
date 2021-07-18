@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:intl/intl.dart';
 import 'globals.dart';
@@ -47,7 +48,7 @@ class _FromDateFieldState extends State<FromDateField> {
               ),
               onPressed: () async {
                 fromDate.value = await selectDate(context, fromDate.value);
-                fromDateVar = formatter.format(fromDate.value);
+                
                 setState(() {
                   print(fromDate.value);
                 });
@@ -125,9 +126,23 @@ class _ToDateFieldState extends State<ToDateField> {
               ),
               onPressed: () async {
                 toDate.value = await selectDate(context, toDate.value);
-                toDateVar = formatter.format(toDate.value);
                 setState(() {
                   print(toDate.value);
+                  checkOverlapping(deluxeCounter.value, bambooCounter.value,
+                      standardCounter.value);
+                  bool dateFlag = dateOverlap(fromDate.value, toDate.value);
+                  if (!dateFlag) {
+                    Fluttertoast.showToast(
+                        msg: "Check Out Date should not come before Check In Date",
+                        toastLength: Toast.LENGTH_SHORT,
+                        gravity: ToastGravity.CENTER,
+                        timeInSecForIosWeb: 1,
+                        backgroundColor: Colors.red,
+                        textColor: Colors.white,
+                        fontSize: 16.0);
+                  }
+
+                  
                 });
               },
             ),
@@ -156,4 +171,25 @@ class _ToDateFieldState extends State<ToDateField> {
       ),
     );
   }
+}
+
+Map<String, int> checkOverlapping(int deluxe, int bamboo, int standard) {
+  Map<String, int> dict = {
+    "Deluxe": deluxe,
+    "Bamboo": bamboo,
+    "Standard": standard
+  };
+  return dict;
+}
+
+bool dateOverlap(DateTime fromDate, DateTime toDate) {
+  
+  if (fromDate.month < toDate.month) {
+    if (fromDate.day < toDate.day) {
+      return true; // true
+    } else {
+      return false; //false
+    }
+  }
+  return false; //false
 }

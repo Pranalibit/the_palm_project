@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:the_palm_project/pages/payment_pages/widgets/google_button.dart';
+import 'package:the_palm_project/pages/payment_pages/bin/google_button.dart';
 
 class DetailsPage extends StatefulWidget {
   @override

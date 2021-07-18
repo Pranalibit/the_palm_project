@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'google_button.dart';
+import '../bin/google_button.dart';
 
 
 
