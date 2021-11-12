@@ -1,15 +1,18 @@
+// @dart=2.9
 import 'dart:async';
 import 'dart:convert';
 
-import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-import 'dart:js' as js;
-import 'package:the_palm_project/pages/payment_pages/widgets/globals.dart';
+
+String link;
 
 class Room {
   final int order_id;
+
   final int Deluxe;
+
   final int Standard;
+
   final int Tent;
   final String name;
   final String contact;
@@ -57,7 +60,7 @@ Future<Room> makePayment(String Deluxe, String Standard, String Tent,
   );
 
   if (response.statusCode == 200) {
-    // Map<String, String> values;
+    Map<String, dynamic> values;
 
     values = json.decode(response.body);
     print(values);
@@ -79,97 +82,5 @@ Future<Room> makePayment(String Deluxe, String Standard, String Tent,
     return Room.fromJson(json.decode(response.body));
   } else {
     throw Exception('Failed to process payment.');
-  }
-}
-
-class Payment extends StatefulWidget {
-  const Payment({Key key}) : super(key: key);
-
-  @override
-  _PaymentState createState() => _PaymentState();
-}
-
-class _PaymentState extends State<Payment> {
-  final TextEditingController _nameController = TextEditingController();
-  final TextEditingController _emailController = TextEditingController();
-  final TextEditingController _contactController = TextEditingController();
-  Future<Room> _futureRoom;
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      alignment: Alignment.center,
-      padding: const EdgeInsets.all(8.0),
-      child: (_futureRoom == null)
-          ? Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                TextField(
-                  controller: _nameController,
-                  decoration: InputDecoration(
-                    hintText: 'Enter Your name',
-                    icon: Icon(Icons.person),
-                  ),
-                ),
-                TextField(
-                  controller: _emailController,
-                  decoration: InputDecoration(
-                    hintText: 'Enter Email ID',
-                    icon: Icon(Icons.email),
-                  ),
-                ),
-                TextFormField(
-                  controller: _contactController,
-                  autovalidateMode: AutovalidateMode.always,
-                  decoration: const InputDecoration(
-                    icon: Icon(Icons.person),
-                    labelText: 'Phone Number *',
-                  ),
-                  onSaved: (String value) {
-                    // This optional block of code can be used to run
-                    // code when the user saves the form.
-                  },
-                  validator: (String value) {
-                    return value.length > 10
-                        ? 'Phone NUmber can be of max 10 digit'
-                        : null;
-                  },
-                ),
-                MaterialButton(
-                  child: Text('Book Room'),
-                  onPressed: () {
-                    setState(() {
-                      _futureRoom = makePayment(
-                          deluxeCounter.value.toString(),
-                          standardCounter.value.toString(),
-                          bambooCounter.value.toString(),
-                          DateTime.now().toString(),
-                          _nameController.toString(),
-                          _emailController.toString(),
-                          _contactController.toString());
-                      print(deluxeCounter.value.toString());
-                    });
-                  },
-                ),
-              ],
-            )
-          : FutureBuilder<Room>(
-              future: _futureRoom,
-              builder: (context, snapshot) {
-                if (snapshot.hasData) {
-                  return MaterialButton(
-                    onPressed: () {
-                      js.context.callMethod('open', [link]);
-                      // html.window.open(link, "_blank");
-                    },
-                    child: Text('Pay'),
-                  );
-                } else if (snapshot.hasError) {
-                  return Text("${snapshot.error}");
-                }
-
-                return CircularProgressIndicator();
-              },
-            ),
-    );
   }
 }

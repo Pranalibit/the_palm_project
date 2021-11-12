@@ -1,4 +1,4 @@
-# the_palm_project
+# palm
 
 A new Flutter project.
 

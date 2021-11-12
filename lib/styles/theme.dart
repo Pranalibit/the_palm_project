@@ -3,14 +3,14 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:the_palm_project/utils/constant.dart';
+import 'package:palm/utils/constant.dart';
 
 Map<int, Color> getSwatch(Color color) {
   final hslColor = HSLColor.fromColor(color);
   final lightness = hslColor.lightness;
-  final lowDivisor = 6;
+  const lowDivisor = 6;
 
-  final highDivisor = 5;
+  const highDivisor = 5;
 
   final lowStep = (1.0 - lightness) / lowDivisor;
   final highStep = lightness / highDivisor;
